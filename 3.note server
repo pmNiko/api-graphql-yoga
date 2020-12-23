@@ -1,0 +1,28 @@
+En este se importa el module GraphQLServer que nos permite 
+hacer una nueva instancia de un servidor, al cual le pasaremos 
+los typeDefs y sus resolvers 
+
+import { GraphQLServer } from "graphql-yoga";
+
+export const server = new GraphQLServer({
+
+});
+
+----- Desde 4.note graphql dir ---- 
+vamos pasar en los typeDefs el schema.graphql 
+pero para esto vamos a utilizar una fn de node 
+que nos permite enlazar la ruta absoluta 
+
+import path from 'path'
+// con esto estaremos importando todo lo que haya en resolvers/index.js
+import resolvers from './graphql/resolvers'
+
+export const server = new GraphQLServer({
+  // de esta manera importamos y pasamos como param nuestro schema
+  typeDefs: path.join(__dirname, 'graphql/schema.graphql')
+  resolvers     <---- cuando la prop y el param se llaman igual se abrevia asi
+});
+
+-----> Vamos a 5.note index js
+
+

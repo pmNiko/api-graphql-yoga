@@ -1,0 +1,10 @@
+En este punto vamos a definir la estructura de directorios y archivos 
+
+dentro de src vamos a crear 
+1. server.js    <<< este tendrá la configuración de GraphQL-Yoga 
+2. database.js  <<< tendra la conección a la base de datos 
+3. models/      <<< aca definiremos los archivos que tendran los 
+                <<< modelos que guardaremos en la base de datos 
+
+4. graphql/     <<< aca irá los archivos relacionados con la API 
+

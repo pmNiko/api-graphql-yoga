@@ -1,0 +1,14 @@
+Este es el archivo principal de nuestro backend.
+Comenzaremos a utilizar las funcionalidades antes 
+configuradas en el server.js 
+
+import {server } from './server'
+
+// iniciamos la instancia de nuestro server 
+server.start({ port: 3100 }, ({ port }) => {
+  console.log("Server on port", port);
+});
+
+Si corremos npm run dev recibimos un error ya que 
+el schema esta vacio. Vamos a configurar el: 
+graphql/schema.graphql 

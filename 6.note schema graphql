@@ -1,0 +1,9 @@
+Vamos a configurar el schema de graphql
+
+Creamos una Query de prueba
+  type Query{
+    ping: String!
+  }
+
+Debemos entonces definir su resolver 
+-> resolvers/Query 

@@ -1,0 +1,23 @@
+Como vamos a importar todos los resolvers 
+desde el resolvers/index.js tenemos que 
+configurar este. 
+
+  import Query from "./Query";
+
+  export default {
+    Query,
+  };
+
+Con esta configuración ya podemos importar los resolvers de una vez.
+Pero tenemos que configurar el resolver del Query que acabamos de definir 
+en el schema.graphql. Por lo tanto en resolvers/Query.js: 
+
+  const Query = {
+    ping() {
+      return "pong!";
+    },
+  };
+
+  export default Query;
+
+

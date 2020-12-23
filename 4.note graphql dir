@@ -1,0 +1,15 @@
+Dentro de esta carpeta definimos la estructura de Querys y Mutation
+las cuales vamos a pasarle en las props a nuestro server 
+
+La estructura de esta será la siguiente:
+  graphql/ 
+         - schema.js 
+         - resolvers/
+                    - Query.js 
+                    - Mutation.js 
+                    - index.js
+
+---- > Volvemos al 3.note server 
+
+
+                    
