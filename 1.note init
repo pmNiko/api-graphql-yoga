@@ -1,0 +1,35 @@
+Comenzamos iniciando el package.json de nuestro backend
+Luego procedemos a instalar dos paquetes 
+- > npm i graphql-yoga para crear la arquitectura GraphQL
+-> npm i mongoose para conectarnos a mongoDB
+
+Por ultimo vamos a instalar y configurar Babel para ejecutar 
+las ultimas caracteristicas de JS dentro de nuestro servidor 
+
+ -> npm i @babel/cli @babel/core @babel/node @babel/preset-env nodemon -D
+1. cli es la herramienta que permite ejecutar babel por consola 
+2. core es el modulo principal de babel con sus funciones
+3. node permite compilar node a través de babel 
+4. preset-env nos permite utilizar las ultimas caracteristicas de JS 
+5. nodemon para que el servidor se refresque ante los cambios del backend 
+6. -D para que se instalen como dependencias de desarrollo 
+
+Hasta aca los modulos principales de instalación.
+Ahora vamos a crear la carpeta src/index.js 
+una vez hecho esto debemos editar el package.json 
+"scripts": {
+    "dev": "nodemon src/index.js --exec babel-node"
+  },
+
+Entonces tendremos nuestro nodemon escuchando los cambios de nuestro 
+servidor, y estaremos ejecutando el codigo con babel. Pero complementario 
+a esto para ejecutar codigo moderno de js con babel añadimos un archivo de 
+configuración extra:
+  .babelrc donde dentro vamos a indicar que solo va interpretar codigo 
+  relacionado con JS 
+
+  {
+    "preset": [
+      ["@babel/env"]
+    ]
+  }
