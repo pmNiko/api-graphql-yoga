@@ -1,3 +1,26 @@
+# Este modulo es el esquema principal de consultas 
+# a la API de GraphQL. En este se definen las Query 
+# y Mutation que se podran realizar al backend.
+
+# Consulta de tipo Query al server 
 type Query{
   ping: String!
+  messages: [Message!]
+}
+
+# Consulta de tipo Mutation al server
+type Mutation {
+  createMessage(
+    title: String!, 
+    content: String!, 
+    author: String!
+  ): Message
+}
+
+# definición del tipo de dato Message
+type Message {
+  _id: ID!
+  title: String!
+  content: String!
+  author: String!
 }

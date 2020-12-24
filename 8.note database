@@ -1,8 +1,9 @@
-/*
-  Este modulo es el encargado de la conexión
-  a la base de datos a través de mongoose.
-*/
-import mongoose from "mongoose";
+Ahora vamos a conectar nuestro servidor con MongoDB
+
+// con esta linea quitamos el error de
+/*  DeprecationWarning: collection.findAndModify is deprecated. 
+    Use findOneAndUpdate, findOneAndReplace or 
+    findOneAndDelete instead?*/
 mongoose.set("useFindAndModify", false);
 
 async function connect() {
@@ -16,3 +17,6 @@ async function connect() {
 }
 
 connect();
+
+Una vez creada la función asincrona de conexion a la BD 
+solo la importamos en index.js

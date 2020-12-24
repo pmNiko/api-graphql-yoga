@@ -7,3 +7,25 @@ Creamos una Query de prueba
 
 Debemos entonces definir su resolver 
 -> resolvers/Query 
+
+----- Model Message definido -------
+
+type Query{
+  ping: String!
+  message: [Message!]
+}
+
+type Mutation {
+  createMessage(title: String!, content: String!, author: String!): Message
+}
+
+# definición del tipo de dato Message
+type Message {
+  _id: ID!
+  title: String!
+  content: String!
+  author: String!
+}
+
+Ahora debemos definir los resolvers que responderan a cada consulta. 
+Comenzamos por resolvers/Query y luego por resolvers/Mutation

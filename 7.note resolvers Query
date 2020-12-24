@@ -20,4 +20,18 @@ en el schema.graphql. Por lo tanto en resolvers/Query.js:
 
   export default Query;
 
+---- Escalamos nuestro resolvers Query.js --------
+
+// importamos el modelo de datos 
+import Messages from '../../model/Messages';
+
+const Query = {
+  ..... 
+  messages: async () => {
+    // retornamos el array de Messages
+    return await Messages.find();
+  }
+}
+
+---> Ahora vamos a definir el resolvers Mutation.js 
 

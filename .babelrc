@@ -1,3 +1,7 @@
+/*
+  Este es un archivo de configuración que le 
+  indica a babel que interpretar codigo JS.
+*/
 {
   "presets": [
     ["@babel/env"]

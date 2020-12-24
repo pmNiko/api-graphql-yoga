@@ -1,0 +1,16 @@
+const Mutation = {
+
+  // en los args que recibo defino que voy a obviar la función padre
+
+  createMessage: async (_, {title, content, author}) => {
+
+    //creo una nueva instancia y luego la guardo en la BD
+    const newMessage = new Message({title, content, author})
+    
+    // retorno el usuario una vez que se guarda
+    return await newMessage.save()
+
+  }
+};
+
+export default Mutation;

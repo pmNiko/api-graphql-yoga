@@ -1,0 +1,30 @@
+Ahora en la carpeta model/Message.js definimos el 
+modelo de datos que vamos a estar guardando en la BD
+
+//importo los modulos de Schema y model 
+import { Schema, model } from "mongoose";
+
+// creo un nuevo Schema de datos para Message
+const messageSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: String,
+    required: true,
+  },
+});
+
+// y exporto el modelo basado en messageSchema
+export default model("Message", messageSchema);
+
+Bien ahora ya tenemos un modelo de datos para nuestros Messages.
+Ahora ya podemos comenzar a escalar nuetro schema.grapql para 
+la consulta de datos. 
+
+---> grapql/schema.grapql
